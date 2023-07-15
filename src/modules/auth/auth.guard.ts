@@ -25,13 +25,11 @@ export class AuthGuard implements CanActivate {
       throw new UnauthorizedException('Пользователь не авторизован');
     }
 
-    const user = await this.authService
+    req.user = await this.authService
       .validateUserToken(bearerToken, TOKEN_TYPE.access)
       .catch(() => {
         throw new UnauthorizedException('Пользователь не авторизован');
       });
-
-    req.user = user;
 
     return true;
   }

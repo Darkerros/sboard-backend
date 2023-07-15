@@ -3,11 +3,10 @@ import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import {
   BadRequestException,
-  HttpException,
   Inject,
   Injectable,
-  UnauthorizedException
-} from "@nestjs/common";
+  UnauthorizedException,
+} from '@nestjs/common';
 
 import { UserService } from '@modules/user/user.service';
 
