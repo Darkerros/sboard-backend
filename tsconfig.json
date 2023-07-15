@@ -17,5 +17,10 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@consts/*": ["src/consts/*"],
+      "@modules/*": ["src/modules/*"],
+      "@models/*": ["src/models/*"],
+    }
   }
 }

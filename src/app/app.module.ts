@@ -1,9 +1,10 @@
+import * as process from 'process';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import * as process from 'process';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import UserModel from '../models/User.model';
-import PostModel from '../models/Post.model';
+
+import UserModel from '@models/User.model';
+import PostModel from '@models/Post.model';
 
 @Module({
   imports: [
