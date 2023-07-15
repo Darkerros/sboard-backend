@@ -3,6 +3,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { AuthModule } from '@modules/auth/auth.module';
+import { UserModule } from '@modules/user/user.module';
+
 import UserModel from '@models/User.model';
 import PostModel from '@models/Post.model';
 
@@ -24,6 +27,8 @@ import PostModel from '@models/Post.model';
       autoLoadEntities: true,
       dropSchema: false,
     }),
+    UserModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

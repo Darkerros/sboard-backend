@@ -3,7 +3,6 @@ import {
   ExecutionContext,
   UnauthorizedException,
 } from '@nestjs/common';
-import UserModel from '@models/User.model';
 
 export const AuthUser = createParamDecorator(
   (data: unknown, ctx: ExecutionContext) => {
@@ -14,7 +13,7 @@ export const AuthUser = createParamDecorator(
     if (!user) {
       throw new UnauthorizedException('Пользователь не авторизован');
     }
-    
+
     return user;
   },
 );

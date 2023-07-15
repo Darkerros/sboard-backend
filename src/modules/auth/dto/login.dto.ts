@@ -1,4 +1,4 @@
-import { IsEmail, IsString, Min, MinLength } from 'class-validator';
+import { IsEmail, IsString, MinLength } from 'class-validator';
 
 export class LoginDto {
   @IsString({ message: 'Почта не может быть пустой ' })
