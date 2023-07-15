@@ -21,6 +21,8 @@
       "@consts/*": ["src/consts/*"],
       "@modules/*": ["src/modules/*"],
       "@models/*": ["src/models/*"],
+      "@exceptions/*": ["src/exceptions/*"],
+      "@decorators/*": ["src/decorators/*"],
     }
   }
 }
