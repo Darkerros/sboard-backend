@@ -12,7 +12,7 @@ export default class UserModel {
   @Column({ type: 'char', unique: true, nullable: false })
   email: string;
 
-  @Column({ type: 'text'})
+  @Column({ type: 'text' })
   password: string;
 
   @Column({ type: 'text', nullable: true })
