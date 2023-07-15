@@ -6,10 +6,10 @@ export default class UserModel {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'char', default: null, nullable: true })
+  @Column({ type: 'text', default: null, nullable: true })
   nickname: string | null;
 
-  @Column({ type: 'char', unique: true, nullable: false })
+  @Column({ type: 'text', unique: true, nullable: false })
   email: string;
 
   @Column({ type: 'text' })
