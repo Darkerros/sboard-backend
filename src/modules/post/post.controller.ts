@@ -42,7 +42,7 @@ export class PostController {
   }
 
   @Delete('/:id')
-  async deletePost(@Param('id') id: number, @AuthUser() user: UserModel) {
-    return await this.postService.deletePost(id, user);
+  async deletePost(@Param('id') id: number) {
+    return await this.postService.deletePost(id);
   }
 }
