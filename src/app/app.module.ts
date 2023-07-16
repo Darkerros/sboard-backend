@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AuthModule } from '@modules/auth/auth.module';
 import { UserModule } from '@modules/user/user.module';
+import { PostModule } from '@modules/post/post.module';
 
 import UserModel from '@models/User.model';
 import PostModel from '@models/Post.model';
@@ -29,6 +30,7 @@ import PostModel from '@models/Post.model';
     }),
     UserModule,
     AuthModule,
+    PostModule,
   ],
   controllers: [],
   providers: [],
