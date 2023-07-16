@@ -12,6 +12,8 @@ async function bootstrap() {
     new ValidationPipe({ exceptionFactory: validationExceptionFactory }),
   );
 
+  app.enableCors({});
+
   const APP_PORT = process.env.PORT;
   await app.listen(APP_PORT, () => {
     console.log(`Start on: ${APP_PORT}`);
