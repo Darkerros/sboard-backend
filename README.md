@@ -1,18 +1,11 @@
-## Installation
-
-```bash
-$ npm install
-```
-
 ## Running the app
-
 ```bash
-# development
-$ npm run start
-
-# watch mode
+# Development
+# Need set up .dev.env db config
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```
+```bash
+# Production in docker
+$ docker-compose build
+$ docker-compose up
 ```
