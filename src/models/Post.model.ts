@@ -12,7 +12,7 @@ export default class PostModel {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'char', nullable: false })
+  @Column({ type: 'text', nullable: false })
   title: string | null;
 
   @Column({ type: 'text', nullable: true })
@@ -20,9 +20,9 @@ export default class PostModel {
 
   @ManyToOne(() => UserModel, (user) => user.lastUpdatedPosts)
   @JoinColumn({ name: 'lastUpdateUserId' })
-  lastUpdateByUser: UserModel[];
+  lastUpdateByUser: UserModel;
 
   @ManyToOne(() => UserModel, (user) => user.createdPosts)
   @JoinColumn({ name: 'createUserId' })
-  createByUser: UserModel[];
+  createByUser: UserModel;
 }
