@@ -41,7 +41,7 @@ export class PostService {
     return postToUpdate;
   }
 
-  async deletePost(postId: number, user: UserModel) {
+  async deletePost(postId: number) {
     const postToDelete = await this.postRepository.findOneBy({ id: postId });
     if (!postToDelete) {
       throw new NotFoundException('Пост не найден');
