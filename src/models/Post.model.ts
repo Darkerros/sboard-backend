@@ -16,7 +16,7 @@ export default class PostModel {
   title: string | null;
 
   @Column({ type: 'text', nullable: true })
-  descriptions: string;
+  description: string;
 
   @ManyToOne(() => UserModel, (user) => user.lastUpdatedPosts)
   @JoinColumn({ name: 'lastUpdateUserId' })
