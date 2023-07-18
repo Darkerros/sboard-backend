@@ -38,7 +38,28 @@ export class PostService {
       throw new NotFoundException('Пост не обновлен');
     }
 
-    return await this.postRepository.findOneBy({ id: postId });
+    return await this.postRepository.findOne({
+      where: { id: postId },
+      select: {
+        id: true,
+        title: true,
+        description: true,
+        lastUpdateByUser: {
+          id: true,
+          nickname: true,
+          email: true,
+        },
+        createByUser: {
+          id: true,
+          nickname: true,
+          email: true,
+        },
+      },
+      relations: {
+        lastUpdateByUser: true,
+        createByUser: true,
+      },
+    });
   }
 
   async deletePost(postId: number) {
