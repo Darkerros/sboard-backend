@@ -51,9 +51,9 @@ export class PostService {
   }
 
   async getPost(dto: GetPostDto) {
-    const page = dto.page - 1 ?? 0;
-    const limit = dto.limit ?? 10;
-    const offset = page * limit;
+    const page = dto?.page ? dto.page - 1 : 0;
+    const limit = dto?.limit ? dto.limit : 20;
+    const offset = page * limit ?? 0;
 
     const filter: FindOptionsWhere<PostModel> | FindOptionsWhere<PostModel>[] =
       dto.query
