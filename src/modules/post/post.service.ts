@@ -38,7 +38,7 @@ export class PostService {
       throw new NotFoundException('Пост не обновлен');
     }
 
-    return postToUpdate;
+    return await this.postRepository.findOneBy({ id: postId });
   }
 
   async deletePost(postId: number) {
