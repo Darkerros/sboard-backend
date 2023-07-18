@@ -59,7 +59,7 @@ export class PostService {
       dto.query
         ? [
             { title: ILike(`%${dto.query}%`) },
-            { descriptions: ILike(`%${dto.query}%`) },
+            { description: ILike(`%${dto.query}%`) },
           ]
         : [];
 
@@ -71,7 +71,7 @@ export class PostService {
       select: {
         id: true,
         title: true,
-        descriptions: true,
+        description: true,
         lastUpdateByUser: {
           id: true,
           nickname: true,
